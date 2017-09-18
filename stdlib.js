@@ -1,7 +1,8 @@
 (stdlib = (
     object = (
+        { mapfh } = arrayMethods(),
         freeze = o => Object.freeze(o),
-        values = o => arrayMethods().mapfh(Object.keys(o))(x => o[x]),
+        values = o => mapfh(Object.keys(o))(x => o[x]),
         keys   = o => Object.keys(o)
 
     ) => ({

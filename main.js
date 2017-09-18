@@ -1,10 +1,9 @@
-const production = false;
-(unitTesting = undefined),
 (main = (
-    run = production 
-        ? appstart(stdlib(), vectorlib(stdlib()))
-        : appstart(stdlib(), vectorlib(stdlib())),
-) => 0)()
+        std=stdlib()
+    ) => (
+        appstart(std, vectorlib(std))
+    )
+)()
 
     // unitTests = (    
     //     {range,mul,sum,isDivisibleBy} = stdlib().mathOps(),
